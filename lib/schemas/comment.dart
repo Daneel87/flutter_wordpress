@@ -104,13 +104,13 @@ class Comment {
     data['post'] = this.post.toString();
     data['parent'] = this.parent.toString();
     data['author'] = this.author.toString();
-    data['author_name'] = this.authorName;
-    data['author_email'] = this.authorEmail;
-    data['author_url'] = this.authorUrl;
-    data['author_ip'] = this.authorIp;
-    data['author_user_agent'] = this.authorUserAgent;
-    data['date'] = this.date;
-    data['date_gmt'] = this.dateGmt;
+    data['author_name'] = this.authorName ?? '';
+    data['author_email'] = this.authorEmail ?? '';
+    data['author_url'] = this.authorUrl ?? '';
+    data['author_ip'] = this.authorIp ?? '';
+    data['author_user_agent'] = this.authorUserAgent ?? '';
+    data['date'] = this.date ?? '';
+    data['date_gmt'] = this.dateGmt ?? '';
     data['content'] = this.content?.toJson();
     data['status'] = enumStringToName(this.status.toString());
 
