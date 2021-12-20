@@ -16,10 +16,10 @@ class Content {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     
-    data['raw'] = this.raw;
-    data['rendered'] = this.rendered;
-    data['protected'] = this.protected;
-    data['block_version'] = this.blockVersion;
+    data['raw'] = this.raw ?? '';
+    data['rendered'] = this.rendered ?? '';
+    data['protected'] = (this.protected ?? false).toString();
+    data['block_version'] = (this.blockVersion ?? 0).toString();
     
     return data;
   }
