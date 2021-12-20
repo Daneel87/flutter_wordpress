@@ -101,9 +101,9 @@ class Comment {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
 
-    data['post'] = this.post;
-    data['parent'] = this.parent;
-    data['author'] = this.author;
+    data['post'] = this.post.toString();
+    data['parent'] = this.parent.toString();
+    data['author'] = this.author.toString();
     data['author_name'] = this.authorName;
     data['author_email'] = this.authorEmail;
     data['author_url'] = this.authorUrl;
