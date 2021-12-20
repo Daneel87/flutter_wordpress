@@ -111,7 +111,7 @@ class Comment {
     data['author_user_agent'] = this.authorUserAgent ?? '';
     data['date'] = this.date ?? '';
     data['date_gmt'] = this.dateGmt ?? '';
-    data['content'] = this.content?.toJson();
+    data['content'] = this.content?.toJson().toString();
     data['status'] = enumStringToName(this.status.toString());
 
     return data;
