@@ -124,7 +124,7 @@ class Comment {
     if(this.dateGmt != null){
       data['date_gmt'] = this.dateGmt;
     }
-    data['content'] = this.content?.toJson().toString();
+    data['content'] = this.content?['rendered'];
     if(this.status != null){
       data['status'] = enumStringToName(this.status.toString());
     }
