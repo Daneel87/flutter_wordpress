@@ -117,8 +117,13 @@ class Comment {
       data['author_ip'] = this.authorIp;
     }
     data['author_user_agent'] = this.authorUserAgent ?? '';
-    data['date'] = this.date ?? '';
-    data['date_gmt'] = this.dateGmt ?? '';
+    
+    if(this.date != null){
+      data['date'] = this.date;
+    }
+    if(this.dateGmt != null){
+      data['date_gmt'] = this.dateGmt;
+    }
     data['content'] = this.content?.toJson().toString();
     data['status'] = enumStringToName(this.status.toString());
 
