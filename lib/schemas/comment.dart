@@ -125,8 +125,9 @@ class Comment {
       data['date_gmt'] = this.dateGmt;
     }
     data['content'] = this.content?.toJson().toString();
-    data['status'] = enumStringToName(this.status.toString());
-
+    if(this.status != null){
+      data['status'] = enumStringToName(this.status.toString());
+    }
     return data;
   }
 
