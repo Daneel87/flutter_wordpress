@@ -104,10 +104,18 @@ class Comment {
     data['post'] = this.post.toString();
     data['parent'] = this.parent.toString();
     data['author'] = this.author.toString();
-    data['author_name'] = this.authorName ?? '';
-    data['author_email'] = this.authorEmail ?? '';
-    data['author_url'] = this.authorUrl ?? '';
-    data['author_ip'] = this.authorIp ?? '';
+    if(this.authorName != null){
+      data['author_name'] = this.authorName;
+    }
+    if(this.authorEmail != null){
+      data['author_email'] = this.authorEmail;
+    }
+    if(this.authorUrl != null){
+      data['author_url'] = this.authorUrl;
+    }
+    if(this.authorIp != null){
+      data['author_ip'] = this.authorIp;
+    }
     data['author_user_agent'] = this.authorUserAgent ?? '';
     data['date'] = this.date ?? '';
     data['date_gmt'] = this.dateGmt ?? '';
